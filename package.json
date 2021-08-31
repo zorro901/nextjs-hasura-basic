@@ -47,6 +47,7 @@
     "typescript": "^4.3.5"
   },
   "jest": {
+    "globalSetup": "<rootDir>/test/setupEnv.ts",
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
