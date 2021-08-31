@@ -36,7 +36,7 @@ const UserDetail: VFC<Props> = ({user}) => {
           <ChevronDoubleLeftIcon
             data-testid={'auth-to-main'}
             className={'h-5 w-5 mr-3 text-blue-500'}/>
-          <span data-testid={'black-to-main'}>Back to main-ssg-page</span>
+          <span data-testid={'back-to-main'}>Back to main-ssg-page</span>
         </div>
       </Link>
     </Layout>

@@ -21,15 +21,15 @@ afterEach(() => {
 afterAll(() => {
   server.close()
 })
-describe('Hasura Fetch Test Cases', () => {
-  it('Should render the list of users by userQuery', async () => {
+describe('Hasura SSG Test Cases', () => {
+  it('Should render the list of users pre-fetched by getStaticProps', async () => {
     const {page} = await getPage({
-      route: '/hasura-main'
+      route: '/hasura-ssg'
     })
     render(page)
-    expect(await screen.findByText('Hasura main page')).toBeInTheDocument()
-    expect(await screen.findByText('Test user A')).toBeInTheDocument()
-    expect(await screen.findByText('Test user B')).toBeInTheDocument()
-    expect(await screen.findByText('Test user C')).toBeInTheDocument()
+    expect(await screen.findByText('SSG+ISR')).toBeInTheDocument()
+    expect(screen.getByText('Test user A')).toBeInTheDocument()
+    expect(screen.getByText('Test user B')).toBeInTheDocument()
+    expect(screen.getByText('Test user C')).toBeInTheDocument()
   })
 })
