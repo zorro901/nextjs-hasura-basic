@@ -11,6 +11,7 @@ export const LocalStateB: VFC = () => {
     <>
       {todos.map((task, index) => {
         return (
+          // eslint-disable-next-line react/jsx-key
           <p className={'mb-3'}>
             {task.title}
           </p>
